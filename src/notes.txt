@@ -1,0 +1,76 @@
+Api in js
+---------
+1)xmlhttpRequest
+2)fetch
+3)async await    --we can store data at a onetime next time we want to getdata that time we will use then
+
+   async  -use before the arguments
+   await  -use before the asyncronous method like fetch
+
+
+ Hook
+ ----
+ we want to display data when open the component
+
+  useEffect  -use to display the data when open the page
+             -when use useEffect it will act as loop ,display the data items continuously
+               to solve this problem using [] as second argument of this function 
+
+ Redirection In react
+ ---------------------
+ react-router-dom       --library used for redirection
+
+ BrowserRouter        --for applying redirection on our app in browser do 0n root component selecter and rap that in BrowserRouter
+ Route             --it is used for path setting on each component
+ Routes            --if using more than 1 paths must use routes
+
+ Params
+ -------
+ useParams    -hook is used to access params
+
+
+ REDUX
+ ------
+ props drilling  --it is occur when the time of coupling
+                 --we want to share data from root component to bottom child component,we can share the data only parent to child that means first share main root to his direct child then that child to his child so on,when the time of do 
+                   this there were occured an error in between child component because of this the data not be reached to bottom child this is called props drilling.
+
+ coupling   --connection more when parent to child relation
+
+        solution  ----to avoid props drilling we need to reduce coupling and make all components independent
+
+  --React introduced a state management technology  -redux
+
+  we can use redux there is more connection b/w parent to child when the time of data sharing
+
+  process of redux
+
+           ---------------        ----------------------
+           -             -        -                    -
+           - reduce            -  -                    -
+           -             --------> -                   -
+           -             -        -       store.js     -
+           ---------------        -                    -
+                 >                -                    -
+                 -                -                    -
+                 -                ----------------------
+                 -                          -
+                 - payload                  >-
+         -------------------     ------------------------
+         -                 - dis  -                     -
+         - action  (logics)- patch-       component     -                        
+         -                 - < - - -                    -
+         -------------------     ------------------------
+
+         3 libraries are need to do redux
+
+             redux
+             react-redux
+             redux-thunk
+
+
+     axios
+     ------
+     used to call api in react        
+
+     useSelector  -hook is used to access data from store
